@@ -150,6 +150,8 @@ class BaseSelector(ManagedWindow):
         loading = self.glade.get_object("loading")
         loading.hide()
 
+        self.tree.restore_columns()
+
         if default:
             self.goto_handle(default)
 
@@ -320,7 +322,6 @@ class BaseSelector(ManagedWindow):
         )
 
         self.tree.set_model(self.model)
-        self.tree.restore_column_size()
 
         # sorting arrow in column header (not on start, only on click)
         if not self.setupcols:
@@ -369,7 +370,7 @@ class BaseSelector(ManagedWindow):
             search=filter_info,
         )
         self.tree.set_model(self.model)
-        self.tree.restore_column_size()
+        self.tree.restore_columns()
         self.tree.grab_focus()
 
     def clear_model(self):

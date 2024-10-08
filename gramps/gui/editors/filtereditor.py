@@ -749,7 +749,7 @@ class EditRule(ManagedWindow):
         config.register("interface.edit-rule-pane", 205)
         panepos = config.get("interface.edit-rule-pane")
         self.get_widget("hpaned1").set_position(panepos)
-        self.rname.restore_column_size()
+        self.rname.restore_columns()
         self.show()
 
     def regex_selection(self, widget=None, use_case=None):
@@ -943,7 +943,7 @@ class EditFilter(ManagedWindow):
         self.draw_rules()
 
         self._set_size()
-        self.rule_list.restore_column_size()
+        self.rule_list.restore_columns()
         self.show()
 
     def on_help_clicked(self, obj):
@@ -1228,7 +1228,7 @@ class FilterEditor(ManagedWindow):
         )
         self.draw_filters()
         self._set_size()
-        self.filter_list.restore_column_size()
+        self.filter_list.restore_columns()
         if not config.get("behavior.immediate-warn"):
             self.get_window().set_tooltip_text(_("Any changes are saved immediately"))
         self.show()

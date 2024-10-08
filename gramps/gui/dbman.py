@@ -434,7 +434,7 @@ class DbManager(CLIDbManager, ManagedWindow):
         column = Gtk.TreeViewColumn(_("Last accessed"), render, text=DATE_COL)
         column.set_sort_column_id(DSORT_COL)
         self.dblist.append_column(column)
-        self.dblist.restore_column_size()
+        self.dblist.restore_columns()
 
     def __populate(self):
         """

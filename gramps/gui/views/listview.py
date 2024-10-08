@@ -207,7 +207,7 @@ class ListView(NavigationView):
         self.selection.connect("changed", self.row_changed)
 
         self.setup_filter()
-        self.list.restore_column_size()
+        self.list.restore_columns()
         return self.vbox
 
     def define_actions(self):
@@ -362,7 +362,7 @@ class ListView(NavigationView):
 
             cput1 = perf_counter()
             self.build_columns(preserve_col)
-            self.list.restore_column_size()
+            self.list.restore_columns()
             cput2 = perf_counter()
             self.list.set_model(self.model)
             cput3 = perf_counter()

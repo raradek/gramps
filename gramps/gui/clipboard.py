@@ -1421,7 +1421,7 @@ class ClipboardWindow(ManagedWindow):
         )
         self.db.connect("database-changed", lambda x: ClipboardWindow.otree.clear())
 
-        mtv.restore_column_size()
+        mtv.restore_columns()
         self.show()
 
     def build_menu_names(self, obj):

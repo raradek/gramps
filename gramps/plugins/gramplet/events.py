@@ -68,7 +68,7 @@ class Events(Gramplet, DbGUIElement):
         self.gui.get_container_widget().remove(self.gui.textview)
         self.gui.get_container_widget().add(self.gui.WIDGET)
         self.gui.WIDGET.show()
-        self.gui.WIDGET.restore_column_size()
+        self.gui.WIDGET.restore_columns()
 
     def on_save(self):
         self.gui.WIDGET.save_column_info()

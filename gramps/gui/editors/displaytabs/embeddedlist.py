@@ -564,7 +564,7 @@ class EmbeddedList(ButtonTab):
             self.columns.append(column)
             self.tree.append_column(column)
         self.track_ref_for_deletion("columns")
-        self.tree.restore_column_size()
+        self.tree.restore_columns()
 
     def get_config_name(self):
         """used to associate the selector config name to the PersistentTreeView"""

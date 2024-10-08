@@ -55,7 +55,7 @@ class Children(Gramplet):
         self.gui.get_container_widget().add(self.gui.WIDGET)
         self.gui.WIDGET.show()
         self.uistate.connect("nameformat-changed", self.update)
-        self.gui.WIDGET.restore_column_size()
+        self.gui.WIDGET.restore_columns()
 
     def on_save(self):
         self.gui.WIDGET.save_column_info()

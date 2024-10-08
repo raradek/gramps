@@ -319,7 +319,7 @@ class BookmarksDialog(ManagedWindow):
         bbox.add(down)
         bbox.add(delete)
         box.pack_start(bbox, 0, 0, 5)
-        self.namelist.restore_column_size()
+        self.namelist.restore_columns()
 
     def edit(self):
         """
